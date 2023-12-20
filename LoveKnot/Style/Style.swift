@@ -10,8 +10,21 @@ import SwiftUI
 
 enum Theme {
     static var backgroundColor: some View {
-       Color.mint.ignoresSafeArea()
+        Color(red: 250, green: 244, blue: 235).ignoresSafeArea()
    }
+}
+
+extension Color {
+    static var dustyPink: Color {
+        Color("DustyPink")
+    }
+    
+    static var cream: Color {
+        Color("Cream")
+    }
+    static var chocolate: Color {
+        Color("Chocolate")
+    }
 }
 
 struct BodyStyleModifier: ViewModifier {
@@ -19,7 +32,7 @@ struct BodyStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.body)
-            .foregroundColor(.black)
+            .foregroundColor(.dustyPink)
             .fontDesign(.serif)
             .multilineTextAlignment(.leading)
     }
@@ -30,7 +43,7 @@ struct TitleStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.largeTitle)
-            .foregroundColor(.accentColor)
+            .foregroundColor(.dustyPink)
             .fontDesign(.serif)
             .fontWeight(.heavy)
             .multilineTextAlignment(.center)
@@ -42,7 +55,7 @@ struct HeadlineStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.headline)
-            .foregroundColor(.accentColor)
+            .foregroundColor(.dustyPink)
             .fontDesign(.serif)
             .fontWeight(.heavy)
             .multilineTextAlignment(.center)
@@ -54,12 +67,20 @@ struct SubHeadlineStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.subheadline)
-            .foregroundColor(.accentColor)
+            .foregroundColor(.dustyPink)
             .fontDesign(.serif)
             .fontWeight(.heavy)
             .multilineTextAlignment(.center)
     }
 }
+
+//struct CustomButtonStyle: ButtonStyle {
+//    var disabled = false
+//    func makeBody(configuration: Self.Configuration) -> some View {
+//        configuration.label
+//        .background(disabled ? Color.dustyPink : .white)
+//    }
+//}
 
 extension View {
     

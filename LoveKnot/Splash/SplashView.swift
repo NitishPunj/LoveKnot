@@ -18,7 +18,7 @@ struct SplashView: View {
     private var image: some View {  // Mark 3
         Image(systemName: "heart.fill")
             .resizable()
-            .foregroundColor(.accentColor)
+            .foregroundColor(.dustyPink)
             .scaledToFit()
             .frame(width: 100, height: 100)
             .rotationEffect(firstAnimation ? Angle(degrees:360) : Angle(degrees: 0)) // Mark 4

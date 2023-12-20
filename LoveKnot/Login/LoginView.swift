@@ -60,12 +60,12 @@ struct LoginView: View {
             
             TextField("Email",
                       text: $email ,
-                      prompt: Text("Email address").foregroundColor(.mint)
+                      prompt: Text("Email address").foregroundColor(.dustyPink)
             )
             .padding(10)
             .overlay {
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(.mint, lineWidth: 2)
+                    .stroke(Color.dustyPink, lineWidth: 2)
             }
             .padding(.horizontal)
             
@@ -74,46 +74,33 @@ struct LoginView: View {
                     if showPassword {
                         TextField("Password", // how to create a secure text field
                                   text: $password,
-                                  prompt: Text("Password").foregroundColor(.mint)) // How to change the color of the TextField Placeholder
+                                  prompt: Text("Password").foregroundColor(.dustyPink)) // How to change the color of the TextField Placeholder
                     } else {
                         SecureField("Password", // how to create a secure text field
                                     text: $password,
-                                    prompt: Text("Password").foregroundColor(.mint)) // How to change the color of the TextField Placeholder
+                                    prompt: Text("Password").foregroundColor(.dustyPink)) // How to change the color of the TextField Placeholder
                     }
                 }
                 .padding(10)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(.mint, lineWidth: 2) // How to add rounded corner to a TextField and change it colour
+                        .stroke(Color.dustyPink, lineWidth: 2) // How to add rounded corner to a TextField and change it colour
                 }
                 
                 Button {
                     showPassword.toggle()
                 } label: {
                     Image(systemName: showPassword ? "eye.slash" : "eye")
-                        .foregroundColor(.mint)
+                        .foregroundColor(.dustyPink)
                 }
                 
             }.padding(.horizontal)
             
             Spacer()
             
-            Button {
+            PrimaryButton(title: "let's go!", isButtonDisabled: isSignInButtonDisabled) {
                 viewModel.buttonTapped(email: email, password: password)
-            } label: {
-                Text("Let's go!")
-                    .bodyStyle()
-            }
-            .frame(height: 50)
-            .frame(maxWidth: .infinity) // how to make a button fill all the space available horizontally
-            .background(
-                isSignInButtonDisabled ? // how to add a gradient to a button in SwiftUI if the button is disabled
-                LinearGradient(colors: [.gray], startPoint: .topLeading, endPoint: .bottomTrailing) :
-                    LinearGradient(colors: [.mint, .accentColor], startPoint: .topLeading, endPoint: .bottomTrailing)
-            )
-            .cornerRadius(20)
-            .disabled(isSignInButtonDisabled) // how to disable while some condition is applied
-            .padding()
+            }.padding()
             
             var cancellable =  viewModel.$state.sink (receiveValue: {  state in
                 if state == .success {
@@ -125,7 +112,7 @@ struct LoginView: View {
             try? await Task.sleep(for: Duration.seconds(2))
             self.launchScreenState.dismiss()
         }.background(
-            LinearGradient(gradient: Gradient(colors: [.teal, .white]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: Gradient(colors: [.cream, .white]), startPoint: .top, endPoint: .bottom)
               .edgesIgnoringSafeArea(.all))
     }
 }
