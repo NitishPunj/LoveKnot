@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		79623F482B331BA600B8CADA /* LoveKnotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F472B331BA600B8CADA /* LoveKnotApp.swift */; };
-		79623F4A2B331BA600B8CADA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F492B331BA600B8CADA /* ContentView.swift */; };
 		79623F4C2B331BA700B8CADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79623F4B2B331BA700B8CADA /* Assets.xcassets */; };
 		79623F4F2B331BA700B8CADA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79623F4E2B331BA700B8CADA /* Preview Assets.xcassets */; };
 		79623F592B331BA700B8CADA /* LoveKnotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F582B331BA700B8CADA /* LoveKnotTests.swift */; };
 		79623F632B331BA700B8CADA /* LoveKnotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F622B331BA700B8CADA /* LoveKnotUITests.swift */; };
 		79623F652B331BA700B8CADA /* LoveKnotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F642B331BA700B8CADA /* LoveKnotUITestsLaunchTests.swift */; };
+		79623F742B331BDB00B8CADA /* LaunchScreenStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F712B331BDB00B8CADA /* LaunchScreenStateManager.swift */; };
+		79623F752B331BDB00B8CADA /* LaunchScreenStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F722B331BDB00B8CADA /* LaunchScreenStep.swift */; };
+		79623F762B331BDB00B8CADA /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F732B331BDB00B8CADA /* SplashView.swift */; };
+		79623F7A2B331D8E00B8CADA /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F792B331D8E00B8CADA /* LoginView.swift */; };
+		79623F7C2B331DAC00B8CADA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F7B2B331DAC00B8CADA /* HomeView.swift */; };
+		79623F812B331DB800B8CADA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F7E2B331DB800B8CADA /* Style.swift */; };
+		79623F822B331DB800B8CADA /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F802B331DB800B8CADA /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,6 @@
 /* Begin PBXFileReference section */
 		79623F442B331BA600B8CADA /* LoveKnot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveKnot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79623F472B331BA600B8CADA /* LoveKnotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveKnotApp.swift; sourceTree = "<group>"; };
-		79623F492B331BA600B8CADA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79623F4B2B331BA700B8CADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79623F4E2B331BA700B8CADA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		79623F542B331BA700B8CADA /* LoveKnotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoveKnotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,13 @@
 		79623F5E2B331BA700B8CADA /* LoveKnotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoveKnotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79623F622B331BA700B8CADA /* LoveKnotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveKnotUITests.swift; sourceTree = "<group>"; };
 		79623F642B331BA700B8CADA /* LoveKnotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoveKnotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		79623F712B331BDB00B8CADA /* LaunchScreenStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenStateManager.swift; sourceTree = "<group>"; };
+		79623F722B331BDB00B8CADA /* LaunchScreenStep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenStep.swift; sourceTree = "<group>"; };
+		79623F732B331BDB00B8CADA /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		79623F792B331D8E00B8CADA /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		79623F7B2B331DAC00B8CADA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		79623F7E2B331DB800B8CADA /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		79623F802B331DB800B8CADA /* TabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				79623F472B331BA600B8CADA /* LoveKnotApp.swift */,
-				79623F492B331BA600B8CADA /* ContentView.swift */,
+				79623F832B331E1200B8CADA /* LandingScreen */,
+				79623F782B331D8E00B8CADA /* Login */,
+				79623F7D2B331DB800B8CADA /* Style */,
+				79623F7F2B331DB800B8CADA /* TabView */,
+				79623F772B331CBF00B8CADA /* Splash */,
 				79623F4B2B331BA700B8CADA /* Assets.xcassets */,
 				79623F4D2B331BA700B8CADA /* Preview Content */,
 			);
@@ -125,6 +141,48 @@
 				79623F642B331BA700B8CADA /* LoveKnotUITestsLaunchTests.swift */,
 			);
 			path = LoveKnotUITests;
+			sourceTree = "<group>";
+		};
+		79623F772B331CBF00B8CADA /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				79623F712B331BDB00B8CADA /* LaunchScreenStateManager.swift */,
+				79623F722B331BDB00B8CADA /* LaunchScreenStep.swift */,
+				79623F732B331BDB00B8CADA /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		79623F782B331D8E00B8CADA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				79623F792B331D8E00B8CADA /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		79623F7D2B331DB800B8CADA /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				79623F7E2B331DB800B8CADA /* Style.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		79623F7F2B331DB800B8CADA /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				79623F802B331DB800B8CADA /* TabView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		79623F832B331E1200B8CADA /* LandingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				79623F7B2B331DAC00B8CADA /* HomeView.swift */,
+			);
+			path = LandingScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +315,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79623F4A2B331BA600B8CADA /* ContentView.swift in Sources */,
+				79623F752B331BDB00B8CADA /* LaunchScreenStep.swift in Sources */,
+				79623F762B331BDB00B8CADA /* SplashView.swift in Sources */,
+				79623F822B331DB800B8CADA /* TabView.swift in Sources */,
+				79623F742B331BDB00B8CADA /* LaunchScreenStateManager.swift in Sources */,
+				79623F7C2B331DAC00B8CADA /* HomeView.swift in Sources */,
+				79623F7A2B331D8E00B8CADA /* LoginView.swift in Sources */,
+				79623F812B331DB800B8CADA /* Style.swift in Sources */,
 				79623F482B331BA600B8CADA /* LoveKnotApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

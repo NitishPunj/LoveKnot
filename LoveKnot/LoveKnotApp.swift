@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct LoveKnotApp: App {
+    @StateObject var launchScreenState = LaunchScreenStateManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ZStack {
+                HomeView().opacity(launchScreenState.isUserLoggedIn ? 1 : 0)
+                LoginView().opacity(launchScreenState.isUserLoggedIn ? 0 : 1)
+                if launchScreenState.state != .finished {
+                    SplashView()
+                }
+            }.environmentObject(launchScreenState)
         }
     }
 }
