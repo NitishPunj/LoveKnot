@@ -42,25 +42,20 @@ struct HomeView: View {
     
     var body: some View {
         ScrollView {
+            Image.homePage.frame(height: 600)
             VStack {
-                HStack (alignment: .center, spacing: 0) {
-                                Text(viewModel.title)
-                                    .headlineStyle()
-                                Image(systemName: "heart.fill")
-                                               .symbolRenderingMode(.palette)
-                                               .foregroundStyle(Color.pink, Color.green)
-                            }
-                Spacer()
-                Text("Welcome to our wedding website")
-                    .bodyStyle()
-                Image("couple image")
-                    .resizable()
-                    .imageScale(.large)
-            }
-            
+                    Text("Neha & Nitish")
+                        .titleStyle()
+                    Image("couple image")
+                    
+                        .resizable()
+                        .imageScale(.large)
+                }
+                
+        }.ignoresSafeArea()
         }
-    }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

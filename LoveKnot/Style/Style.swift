@@ -43,7 +43,7 @@ struct TitleStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.largeTitle)
-            .foregroundColor(.dustyPink)
+            .foregroundColor(.chocolate)
             .fontDesign(.serif)
             .fontWeight(.heavy)
             .multilineTextAlignment(.center)

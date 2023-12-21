@@ -36,7 +36,10 @@ struct SplashView: View {
             VStack {
                 Text("Neha & Nitish")
                     .titleStyle()
+                Text("are getting married!")
+                    .titleStyle()
                 image
+               
             }
             
         }.onReceive(animationTimer) { timerValue in
