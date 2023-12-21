@@ -9,17 +9,38 @@ import SwiftUI
 
 typealias EmptyStateActionHandler = () -> Void
 
-struct PrimaryButton: View {
+enum ButtonConfiguration {
+    case primary
+    case secondary
+}
+
+struct ActionButton: View {
     private let handler: EmptyStateActionHandler
     private var title: String
     private var isButtonDisabled: Bool
+    private let buttonConfiguration: ButtonConfiguration
+    
+    var foregroundColor: Color {
+        switch (isButtonDisabled, buttonConfiguration) {
+        case (true, .primary):
+            return .dustyPink
+        case (false, .primary):
+            return .white
+        case (true, .secondary):
+            return .mint
+        case (false, .secondary):
+            return .white
+        }
+    }
     
     internal init(title: String,
                   isButtonDisabled: Bool,
-                  handler: @escaping EmptyStateActionHandler) {
+                  handler: @escaping EmptyStateActionHandler,
+                  buttonConfiguration: ButtonConfiguration = .primary) {
         self.handler = handler
         self.isButtonDisabled = isButtonDisabled
         self.title = title
+        self.buttonConfiguration = buttonConfiguration
     }
     
     var body: some View {
@@ -27,10 +48,12 @@ struct PrimaryButton: View {
             handler()
         } label: {
             Text(title)
-                .foregroundColor(isButtonDisabled ? .dustyPink : .white)
+                .foregroundColor(foregroundColor)
+                .fontDesign(.serif)
         }
+        .fontDesign(.serif)
         .frame(height: 50)
-        .frame(maxWidth: .infinity) // how to make a button fill all the space available horizontally
+        .frame(maxWidth: .infinity) // to make a button fill all the space available horizontally
         .background(
             isButtonDisabled ?
             LinearGradient(colors: [.cream], startPoint: .topLeading, endPoint: .bottomTrailing) :
@@ -41,8 +64,8 @@ struct PrimaryButton: View {
     }
 }
 
-struct PrimaryButton_Previews: PreviewProvider {
+struct ActionButton_Previews: PreviewProvider {
     static var previews: some View {
-        PrimaryButton(title: "Primary button", isButtonDisabled: false) {}
+        ActionButton(title: "Primary button", isButtonDisabled: false) {}
     }
 }

@@ -22,13 +22,13 @@ struct User {
 
 extension User {
    static var dummy: User {
-        User(name: "Sharma", accessToEvents: WeddingEvents.allCases)
+        User(name: "", accessToEvents: WeddingEvents.allCases)
     }
 }
 
 final class HomeScreenViewModel: ObservableObject {
-    @Published private(set) var title = ""
     
+    @Published private(set) var title = ""
     private var user: User!
     
     init(user: User) {

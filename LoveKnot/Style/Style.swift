@@ -74,14 +74,6 @@ struct SubHeadlineStyleModifier: ViewModifier {
     }
 }
 
-//struct CustomButtonStyle: ButtonStyle {
-//    var disabled = false
-//    func makeBody(configuration: Self.Configuration) -> some View {
-//        configuration.label
-//        .background(disabled ? Color.dustyPink : .white)
-//    }
-//}
-
 extension View {
     
     func titleStyle() -> some View {

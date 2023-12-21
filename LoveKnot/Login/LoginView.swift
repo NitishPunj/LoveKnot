@@ -98,7 +98,7 @@ struct LoginView: View {
             
             Spacer()
             
-            PrimaryButton(title: "let's go!", isButtonDisabled: isSignInButtonDisabled) {
+            ActionButton(title: "let's go!", isButtonDisabled: isSignInButtonDisabled) {
                 viewModel.buttonTapped(email: email, password: password)
             }.padding()
             

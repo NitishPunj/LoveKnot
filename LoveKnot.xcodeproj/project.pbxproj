@@ -21,6 +21,7 @@
 		79623F812B331DB800B8CADA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F7E2B331DB800B8CADA /* Style.swift */; };
 		79623F822B331DB800B8CADA /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F802B331DB800B8CADA /* TabView.swift */; };
 		79623F862B33589800B8CADA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F852B33589800B8CADA /* PrimaryButton.swift */; };
+		79623F882B33816100B8CADA /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79623F872B33816100B8CADA /* CarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		79623F7E2B331DB800B8CADA /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		79623F802B331DB800B8CADA /* TabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		79623F852B33589800B8CADA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		79623F872B33816100B8CADA /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				79623F7B2B331DAC00B8CADA /* HomeView.swift */,
+				79623F872B33816100B8CADA /* CarouselView.swift */,
 			);
 			path = LandingScreen;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79623F882B33816100B8CADA /* CarouselView.swift in Sources */,
 				79623F862B33589800B8CADA /* PrimaryButton.swift in Sources */,
 				79623F752B331BDB00B8CADA /* LaunchScreenStep.swift in Sources */,
 				79623F762B331BDB00B8CADA /* SplashView.swift in Sources */,
