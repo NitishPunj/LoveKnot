@@ -7,52 +7,34 @@
 
 import SwiftUI
 
-enum WeddingEvents: CaseIterable {
-    case civilCeremony
-    case haldi
-    case mehendi
-    case hinduCeremony
-}
-
-
-struct User {
-    let name: String
-    let accessToEvents: [WeddingEvents]
-}
-
-extension User {
-   static var dummy: User {
-        User(name: "", accessToEvents: WeddingEvents.allCases)
-    }
-}
-
-final class HomeScreenViewModel: ObservableObject {
-    
-    @Published private(set) var title = ""
-    private var user: User!
-    
-    init(user: User) {
-        self.user = user
-        self.title = "Hi \(user.name)"
-    }
-}
-
 struct HomeView: View {
     @ObservedObject var viewModel: HomeScreenViewModel = HomeScreenViewModel(user: User.dummy)
     
-    var body: some View {
-        ScrollView {
-            Image.homePage.frame(height: 600)
+    
+    private var headerView: some View {
+        VStack {
+            Image.homePage
+                .frame(height: 600)
+                .cornerRadius(30)
+                .shadow(color: .chocolate, radius: 2)
             VStack {
                     Text("Neha & Nitish")
-                        .titleStyle()
-                    Image("couple image")
-                    
-                        .resizable()
-                        .imageScale(.large)
+                        .titleStyle2Light()
                 }
-                
-        }.ignoresSafeArea()
+        }
+    }
+    
+    var body: some View {
+        ScrollView {
+            headerView
+            Spacer()
+            VStack {
+                Text(viewModel.detailText).bodyStyle()
+                    .padding(20)
+                GridView().padding(.bottom,40)
+            }
+        }.ignoresSafeArea(.all)
+            .background(Color.cream)
         }
 }
 

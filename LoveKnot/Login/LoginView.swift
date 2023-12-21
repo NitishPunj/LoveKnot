@@ -49,15 +49,11 @@ struct LoginView: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: 15) {
-            
             Spacer()
             Text("Welcome")
                 .titleStyle()
-            
             Text(viewModel.title)
                 .headlineStyle()
-            
-            
             TextField("Email",
                       text: $email ,
                       prompt: Text("Email address").foregroundColor(.dustyPink)
@@ -68,7 +64,6 @@ struct LoginView: View {
                     .stroke(Color.dustyPink, lineWidth: 2)
             }
             .padding(.horizontal)
-            
             HStack {
                 Group {
                     if showPassword {
@@ -86,14 +81,12 @@ struct LoginView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.dustyPink, lineWidth: 2) // How to add rounded corner to a TextField and change it colour
                 }
-                
                 Button {
                     showPassword.toggle()
                 } label: {
                     Image(systemName: showPassword ? "eye.slash" : "eye")
                         .foregroundColor(.dustyPink)
                 }
-                
             }.padding(.horizontal)
             
             Spacer()

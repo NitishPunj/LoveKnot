@@ -35,9 +35,9 @@ struct SplashView: View {
             Theme.backgroundColor
             VStack {
                 Text("Neha & Nitish")
-                    .titleStyle()
+                    .titleStyle2Light()
                 Text("are getting married!")
-                    .titleStyle()
+                    .titleStyle2Light()
                 image
                
             }

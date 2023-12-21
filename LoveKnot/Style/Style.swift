@@ -10,7 +10,7 @@ import SwiftUI
 
 enum Theme {
     static var backgroundColor: some View {
-        Color(red: 250, green: 244, blue: 235).ignoresSafeArea()
+        Color.cream.ignoresSafeArea()
    }
 }
 
@@ -32,7 +32,7 @@ struct BodyStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.body)
-            .foregroundColor(.dustyPink)
+            .foregroundColor(.chocolate)
             .fontDesign(.serif)
             .multilineTextAlignment(.leading)
     }
@@ -49,6 +49,18 @@ struct TitleStyleModifier: ViewModifier {
             .multilineTextAlignment(.center)
     }
 }
+
+struct TitleStyle2Modifier: ViewModifier {
+    
+    func body(content: Content) -> some View {
+        content
+            .font(.largeTitle)
+            .foregroundColor(.dustyPink)
+            .fontDesign(.serif)
+            .fontWeight(.heavy)
+            .multilineTextAlignment(.center)
+    }
+}
     
 struct HeadlineStyleModifier: ViewModifier {
     
@@ -58,7 +70,7 @@ struct HeadlineStyleModifier: ViewModifier {
             .foregroundColor(.dustyPink)
             .fontDesign(.serif)
             .fontWeight(.heavy)
-            .multilineTextAlignment(.center)
+            .multilineTextAlignment(.leading)
     }
 }
 
@@ -78,6 +90,10 @@ extension View {
     
     func titleStyle() -> some View {
         modifier(TitleStyleModifier())
+    }
+    
+    func titleStyle2Light() -> some View {
+        modifier(TitleStyle2Modifier())
     }
     
     func bodyStyle() -> some View {
