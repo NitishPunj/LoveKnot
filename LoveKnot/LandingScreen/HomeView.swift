@@ -25,17 +25,30 @@ struct HomeView: View {
     }
     
     var body: some View {
-        ScrollView {
-            headerView
-            Spacer()
-            VStack {
-                Text(viewModel.detailText).bodyStyle()
-                    .padding(20)
-                GridView().padding(.bottom,40)
-            }
-        }.ignoresSafeArea(.all)
-            .background(Color.cream)
-        }
+        NavigationStack {
+            ScrollView {
+                headerView
+                Spacer()
+                VStack {
+                    Text(viewModel.detailText).bodyStyle()
+                        .padding(20)
+                    GridView()
+                        .padding(.bottom,40)
+                        .navigationDestination(for: GridViewModel.self) {  gridModel in
+                            switch gridModel.type {
+                            case .event:
+                                EventDetail(eventType: gridModel.event ?? .civilCeremony)
+                            case .aboutUs:
+                                TabBarView()
+                            case .rsvp:
+                                TabBarView()
+                            }
+                        }
+                }
+            }.ignoresSafeArea(.all)
+                .background(Color.cream)
+        }.accentColor(.chocolate)
+    }
 }
 
 

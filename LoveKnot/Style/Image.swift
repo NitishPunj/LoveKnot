@@ -11,4 +11,10 @@ extension Image {
     static var homePage: Image {
         Image("YosemiteHomeOption1").resizable()
     }
+    static var mehndi: Image {
+        Image("Mehndipicture").resizable()
+    }
+    static var whiteWedding: Image {
+        Image("Stones").resizable()
+    }
 }

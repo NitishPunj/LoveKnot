@@ -25,6 +25,10 @@ extension Color {
     static var chocolate: Color {
         Color("Chocolate")
     }
+    
+    static var mehndiGreen: Color {
+        Color("Mehndigreen")
+    }
 }
 
 struct BodyStyleModifier: ViewModifier {

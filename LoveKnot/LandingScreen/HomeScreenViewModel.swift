@@ -7,22 +7,14 @@
 
 import Foundation
 
-enum WeddingEvents: CaseIterable {
-    case civilCeremony
-    case haldi
-    case mehendi
-    case hinduCeremony
-}
-
-
 struct User {
     let name: String
-    let accessToEvents: [WeddingEvents]
+    let accessToEvents: [WeddingEventType]
 }
 
 extension User {
    static var dummy: User {
-        User(name: "", accessToEvents: WeddingEvents.allCases)
+        User(name: "", accessToEvents: WeddingEventType.allCases)
     }
 }
 

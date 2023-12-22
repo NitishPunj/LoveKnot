@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CarouselView: View {
+    var event: WeddingEventType
     var body: some View {
         ScrollView {
             Theme.backgroundColor
@@ -25,6 +26,6 @@ struct CarouselView: View {
 
 struct CarouselView_Previews: PreviewProvider {
     static var previews: some View {
-        CarouselView()
+        CarouselView(event:.mehendi)
     }
 }
