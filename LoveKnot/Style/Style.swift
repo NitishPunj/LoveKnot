@@ -71,7 +71,7 @@ struct HeadlineStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.headline)
-            .foregroundColor(.dustyPink)
+            .foregroundColor(.chocolate)
             .fontDesign(.serif)
             .fontWeight(.heavy)
             .multilineTextAlignment(.leading)
@@ -83,7 +83,7 @@ struct SubHeadlineStyleModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.subheadline)
-            .foregroundColor(.dustyPink)
+            .foregroundColor(.chocolate)
             .fontDesign(.serif)
             .fontWeight(.heavy)
             .multilineTextAlignment(.center)

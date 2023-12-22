@@ -25,28 +25,29 @@ struct EventDetail: View {
     
     private var whenView: some View {
         HStack {
-            Text("When: ").headlineStyle()
-            VStack {
+            //Text("When: ").headlineStyle()
+            VStack (alignment: .leading, spacing: 10){
                 Text(event.when)
                 .headlineStyle()
+                Text(event.time)
+                .subHeadlineStyle()
                 }
         }
     }
     
     private var whereView: some View {
         HStack {
-            Text("Where:").headlineStyle()
-            VStack {
+            //Text("Where:").headlineStyle()
+            VStack(alignment: .leading, spacing: 10) {
+                description
                 Text(event.location)
-                .headlineStyle()
+                .bodyStyle()
                 }
         }
     }
     
     private var description: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Detail:").headlineStyle()
-            
             Text(event.description)
                 .bodyStyle()
         }
@@ -64,23 +65,29 @@ struct EventDetail: View {
     
     var body: some View {
         VStack {
-            Text(event.name).titleStyle()
+            Text(event.name)
+                .font(.title2)
+                .foregroundColor(.cream)
+                .fontDesign(.serif)
+                .fontWeight(.heavy)
+                .multilineTextAlignment(.center)
+            Spacer()
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
+                    Spacer()
                     whenView
                     whereView
-                    description
-                }.padding([.leading, .bottom, .trailing], 20.0)
+                }.padding([.leading, .bottom, .trailing], 10)
                 FooterView
                 rsvp
                 Spacer()
-            }
-        }.background(Color.cream)
+            }.background(Color.cream)
+        }.background(Color.mehndiGreen)
     }
 }
 
 struct EventDetail_Previews: PreviewProvider {
     static var previews: some View {
-        EventDetail(eventType: .civilCeremony)
+        EventDetail(eventType: .mehendi)
     }
 }

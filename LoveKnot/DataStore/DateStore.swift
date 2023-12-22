@@ -24,6 +24,7 @@ struct Event: Decodable, Hashable, Identifiable {
     let description: String
     let location: String
     let when: String
+    let time: String
     let imageUrl: String
     let faq: [String:String]
 }
@@ -52,9 +53,10 @@ fileprivate extension Event {
     static var mehendi: Event {
         .init(name: "The Mehndi Function",
               type: .mehendi,
-              description: "This will be a fun night of beautiful mehndi art, indian street food, music, and dancing. Mehndi, otherwise known as henna, is a paste associated with positive spirits and good luck which is applied in intricate designs to the bride’s hands and feet. The colour of mehndi on the bride's hands represents the deep love between the to-be-couple. Mehndi artists will be available on the night if you wish to apply.",
-              location: "13 Powderham Caufield",
-              when: "8th March 2024",
+              description: "Fun and colourful Indian clothing. No stiletto heels please.",
+              location: "13 Powderham Road, Caulfield North VIC 3161, Australia",
+              when: "Friday, March 8 2024",
+              time: "From 6pm",
               imageUrl: "Mehndipicture",
               faq: [:])
     }
@@ -65,6 +67,7 @@ fileprivate extension Event {
               description: "",
               location: "",
               when: "",
+              time: "",
               imageUrl: "Stones",
               faq: [:])
     }
@@ -73,8 +76,9 @@ fileprivate extension Event {
         .init(name: "Haldi",
               type: .haldi,
               description: "",
-              location: "",
+              location: "13 Powderham Road, Caulfield North VIC 3161, Australia",
               when: "",
+              time: "",
               imageUrl: "",
               faq: [:])
     }
@@ -84,6 +88,7 @@ fileprivate extension Event {
               description: "",
               location: "",
               when: "",
+              time: "",
               imageUrl: "",
               faq: [:])
     }
